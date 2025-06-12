@@ -14,7 +14,7 @@ export const categories = [
 export const restaurants = [
   {
     id: 1,
-    name: "Rose Garden Restaurant",
+    name: "Rose1 Garden Restaurant",
     image: require("../assets/images/restaurant_1.png"),
     tags: "Burger · Chicken · Rice · Wings",
     rating: 4.7,
@@ -23,7 +23,7 @@ export const restaurants = [
   },
   {
     id: 2,
-    name: "Rose Garden Restaurant",
+    name: "Rose2 Garden Restaurant",
     image: require("../assets/images/restaurant_2.png"),
     tags: "Burger · Chicken · Rice · Wings",
     rating: 4.7,
@@ -32,7 +32,7 @@ export const restaurants = [
   },
   {
     id: 3,
-    name: "Rose Garden Restaurant",
+    name: "Rose3 Garden Restaurant",
     image: require("../assets/images/restaurant_3.png"),
     tags: "Burger · Chicken · Rice · Wings",
     rating: 4.7,

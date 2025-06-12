@@ -1,20 +1,36 @@
-import { View, Text, Image, StyleSheet } from "react-native";
-import { FontAwesome, Entypo } from "@expo/vector-icons";
+import { Entypo, FontAwesome } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default function RestaurantCard({ image, name, tags, rating, deliveryFee, eta }: any) {
+export default function RestaurantCard({
+  id,       
+  image,
+  name,
+  tags,
+  rating,
+  deliveryFee,
+  eta,
+}: any) {
+
+  const router = useRouter();
+
   return (
-    <View style={styles.card}>
-      <Image source={image} style={styles.image} />
-      <Text style={styles.name}>{name}</Text>
-      <Text style={styles.tags}>{tags}</Text>
-      <View style={styles.infoRow}>
-        <FontAwesome name="star" size={14} color="orange" />
-        <Text style={styles.infoText}>{rating}</Text>
-        <Entypo name="price-tag" size={14} color="#999" />
-        <Text style={styles.infoText}>{deliveryFee}</Text>
-        <Text style={styles.infoText}>{eta}</Text>
+    <TouchableOpacity
+      onPress={() => router.push(`/restaurant/${id}`)}
+    >
+      <View style={styles.card}>
+        <Image source={image} style={styles.image} />
+        <Text style={styles.name}>{name}</Text>
+        <Text style={styles.tags}>{tags}</Text>
+        <View style={styles.infoRow}>
+          <FontAwesome name="star" size={14} color="orange" />
+          <Text style={styles.infoText}>{rating}</Text>
+          <Entypo name="price-tag" size={14} color="#999" />
+          <Text style={styles.infoText}>{deliveryFee}</Text>
+          <Text style={styles.infoText}>{eta}</Text>
+        </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
