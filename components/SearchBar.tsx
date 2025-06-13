@@ -1,12 +1,17 @@
-import { View, TextInput, StyleSheet } from "react-native";
+import React from "react";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-export default function SearchBar() {
+type Props = {
+  onPress: () => void;
+};
+
+export default function SearchBar({ onPress }: Props) {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <Ionicons name="search" size={20} color="#999" />
-      <TextInput style={styles.input} placeholder="Search dishes, restaurants" />
-    </View>
+      <Text style={styles.placeholder}>Search, Order, Enjoy, Repeat!</Text>
+    </TouchableOpacity>
   );
 }
 
@@ -19,5 +24,9 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: "center",
   },
-  input: { marginLeft: 10, flex: 1 },
+  placeholder: {
+    marginLeft: 10,
+    color: "#999",
+    fontSize: 16,
+  },
 });
