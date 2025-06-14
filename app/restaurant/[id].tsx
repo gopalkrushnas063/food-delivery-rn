@@ -4,6 +4,7 @@ import { useState } from "react";
 import {
   Dimensions,
   Image,
+  SafeAreaView,
   ScrollView,
   StyleSheet,
   Text,
@@ -51,14 +52,15 @@ export default function RestaurantDetail() {
   };
 
   return (
+    <SafeAreaView style={styles.safeArea}>
     <ScrollView style={styles.container}>
       {/* Carousel Header */}
       <View
-        style={{ position: "relative", borderRadius: 30, overflow: "hidden" }}
+        style={{ position: "relative", borderRadius: 20, overflow: "hidden" }}
       >
         <Carousel
           width={width}
-          height={250}
+          height={400}
           data={images}
           scrollAnimationDuration={1000}
           onSnapToItem={(index) => setActiveIndex(index)}
@@ -132,12 +134,17 @@ export default function RestaurantDetail() {
         </ScrollView>
       </View>
     </ScrollView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: "#fff",
+  },
   container: { flex: 1, backgroundColor: "#fff" },
-  heroImage: { width: "100%", height: 250 },
+  heroImage: { width: "100%", height: 400, borderRadius: 20 },
   topIcons: {
     position: "absolute",
     top: 40,
