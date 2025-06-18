@@ -1,8 +1,8 @@
 export const categories = [
   { id: 1, title: "Pizza", image: require("../assets/images/pizza.png") },
-  { id: 2, title: "Burger", image: require("../assets/images/pizza.png") },
+  { id: 2, title: "Burger", image: require("../assets/images/react-logo.png") },
   { id: 3, title: "Chicken", image: require("../assets/images/pizza.png") },
-  { id: 4, title: "Rice", image: require("../assets/images/pizza.png") },
+  { id: 4, title: "Rice", image: require("../assets/images/react-logo.png") },
   { id: 5, title: "Wings", image: require("../assets/images/pizza.png") },
   { id: 6, title: "Salad", image: require("../assets/images/pizza.png") },
   { id: 7, title: "Dessert", image: require("../assets/images/pizza.png") },
